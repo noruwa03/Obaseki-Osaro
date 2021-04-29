@@ -1,0 +1,396 @@
+@import "fonts";
+@import "flex";
+@import "colors";
+@import "button";
+
+// Css Reset
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $poppins;
+}
+
+#home {
+  background: $homeBg;
+  width: 100%;
+
+  header {
+    width: 100%;
+    padding: 1.2rem 3rem;
+    margin: 0rem auto;
+    background: $white;
+    // @include flex(row, space-between);
+    z-index: 2;
+
+    .menuBtn {
+      z-index: 6;
+      position: fixed;
+      top: 3.5rem;
+      left: 2rem;
+    }
+
+    .sidebar {
+      background: $nameColor;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      z-index: 5;
+      transition: all 0.4s ease;
+
+      ul {
+        margin: 8rem 3rem;
+
+        li {
+          margin-top: 1.2rem;
+
+          a {
+            font-size: 1.5em;
+            color: $white;
+            font-family: $croissantone;
+            padding: 0.3rem 1rem;
+
+            &:hover {
+              color: $professionColor;
+              transition: all 0.3s linear;
+            }
+          }
+        }
+      }
+    }
+
+    .menuBtn {
+      padding: 0.7rem;
+      cursor: pointer;
+
+      img {
+        width: 2.68rem;
+        height: 1.68rem;
+        filter: invert(1);
+      }
+    }
+
+    .name {
+      text-align: center;
+      transform: translateY(1rem);
+      font-family: $croissantone;
+      color: $nameColor;
+      font-size: 2.24em;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      z-index: 4;
+
+      & span {
+        transform: translateY(-0.7rem);
+        display: block;
+        text-align: center;
+        font-family: $croissantone;
+      }
+    }
+
+    .contact {
+      text-align: end;
+      transform: translateY(-3rem);
+      a {
+        position: relative;
+        z-index: 1;
+        padding: 0.6rem 1.25rem;
+        @extend %btn;
+
+        &:hover {
+          color: $white;
+          transition: all 0.3s ease;
+        }
+
+        &:hover span {
+          width: 100%;
+        }
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 100%;
+          background: $nameColor;
+          z-index: -1;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+  }
+}
+
+#about {
+  padding: 4.1rem 0rem;
+
+  .con {
+    width: 60%;
+    margin: 0rem auto;
+
+    .row {
+      @include flex(row, space-between);
+
+      .about-person {
+        font-weight: 600;
+
+        h1 {
+          font-size: 3em;
+          font-family: $croissantone;
+        }
+
+        .name {
+          font-size: 3em;
+          font-family: $amita;
+
+          span {
+            color: $professionColor;
+            font-family: $pacifico;
+            font-weight: 500;
+          }
+        }
+
+        .profession {
+          font-size: 3em;
+          font-family: $redressed;
+        }
+
+        .dynamic-txts {
+          height: 90px;
+          line-height: 90px;
+          overflow: hidden;
+
+          li {
+            list-style: none;
+            color: $professionColor;
+            font-size: 60px;
+            font-weight: 500;
+            position: relative;
+            top: 0;
+            animation: slide 12s steps(4) infinite;
+
+            span {
+              position: relative;
+              margin: 5px 0;
+              line-height: 80px;
+              font-family: $redressed;
+
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: #fff;
+                border-left: 2px solid $professionColor;
+                animation: typing 3s steps(10) infinite;
+              }
+            }
+          }
+        }
+
+        .resume {
+          margin-top: 1.5rem;
+          a {
+            @extend %btn;
+            padding: 0.6rem 1rem;
+            font-size: 1em;
+
+            &:hover {
+              background: $nameColor;
+              color: $white;
+              transition: all 0.3s linear;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 22rem;
+      }
+    }
+
+    .socials {
+      width: 11rem;
+      @include flex(row, space-between);
+
+      img {
+        width: 2.1rem;
+        height: 2.1rem;
+        cursor: pointer;
+
+        &:last-child {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+#skill {
+  padding: 4.2rem 0rem;
+
+  .rel {
+    position: relative;
+    width: 70%;
+    height: 30rem;
+    margin: 0rem auto;
+
+    .con1 {
+      position: absolute;
+      width: 19rem;
+      height: 19rem;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+      z-index: 1;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .con2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 80%;
+      height: 100%;
+      background: $homeBg;
+      @include flex(column, center);
+      align-items: flex-start;
+
+      .heading,
+      .desc {
+        margin-left: 9rem;
+        padding: 0rem 0.8rem;
+      }
+
+      .heading {
+        font-size: 2.3em;
+        font-family: $sofia;
+      }
+
+      .desc {
+        font-size: 1.7em;
+        font-family: $rancho;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+footer {
+  padding: 3rem 0rem;
+
+  .heading {
+    text-align: center;
+    font-size: 2.4em;
+    color: $nameColor;
+    font-family: $redressed;
+    font-weight: 600;
+  }
+
+  .row0 {
+    .sub-heading {
+      margin-top: 3.2rem;
+      text-align: center;
+      font-size: 1.07em;
+      color: $nameColor;
+      font-family: $croissantone;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .follow-me {
+      text-align: end;
+      margin-right: 6rem;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      color: $nameColor;
+      font-family: $croissantone;
+    }
+  }
+
+  .row {
+    .anchor {
+      text-align: center;
+      margin-top: 2rem;
+
+      a {
+        padding: 0.43rem 1.3rem;
+        background: $nameColor;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $croissantone;
+        border-radius: 0.12rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: $professionColor;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .socials {
+      text-align: end;
+      margin-right: 3rem;
+      transform: translateY(-1.6rem);
+
+      img {
+        width: 3rem;
+        margin-left: 1rem;
+        padding: 0.45rem;
+        border-radius: 50%;
+        box-shadow: 0rem 0rem 0.3rem rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ft {
+    @include flex(row, center);
+    font-size: 1.1em;
+    color: $nameColor;
+
+    img {
+      width: 1.6rem;
+      margin: 0rem 0.4rem;
+    }
+
+    #copyright-year {
+      margin: 0rem 0.4rem;
+    }
+  }
+}
+
+@import "ipad-portrait";
+@import "ipad";
+@import "md-screen";
+@import "mobile";
+@import "mobile-landscape";
+@import "motoG4";
+@import "sm-mobile";

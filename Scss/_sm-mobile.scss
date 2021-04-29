@@ -1,0 +1,57 @@
+@media screen and (max-width: 322px) {
+  #skill {
+    padding: 3.4rem 0rem;
+
+    .rel {
+      position: relative;
+      width: 100%;
+      height: 27rem;
+      margin: 0rem auto;
+
+      .con1 {
+        position: absolute;
+        width: 15rem;
+        height: 15rem;
+        left: 50%;
+        top: -23%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+        border-radius: 0.2rem;
+
+        img {
+          width: 100%;
+          border-radius: 0.2rem;
+        }
+      }
+
+      .con2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $homeBg;
+        border-radius: 0.2rem;
+
+        .heading,
+        .desc {
+          margin-left: 0rem;
+        }
+
+        .heading {
+          margin-top: 5rem;
+          text-align: start;
+          font-size: 2.1em;
+          font-family: $redressed;
+          padding: 0.3rem 1rem;
+        }
+
+        .desc {
+          padding: 0rem 1rem;
+          font-size: 0.95em;
+          font-family: $amita;
+        }
+      }
+    }
+  }
+}
