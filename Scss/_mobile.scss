@@ -116,7 +116,7 @@
         }
 
         img {
-          width: 22rem;
+          width: 19.8rem;
         }
       }
 
@@ -262,9 +262,9 @@
     }
 
     .ft {
-      margin-top: 2.3rem;
+      margin-top: 2.54rem;
       @include flex(row, center);
-      font-size: 1.1em;
+      font-size: 0.98em;
       color: $nameColor;
 
       img {

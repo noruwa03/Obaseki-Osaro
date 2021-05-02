@@ -1222,7 +1222,7 @@ footer .ft #copyright-year {
     transition: all 0.3s linear;
   }
   #about .con .row img {
-    width: 22rem;
+    width: 19.8rem;
   }
   #about .con .socials {
     margin-top: 2rem;
@@ -1376,7 +1376,7 @@ footer .ft #copyright-year {
     cursor: pointer;
   }
   footer .ft {
-    margin-top: 2.3rem;
+    margin-top: 2.54rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1392,7 +1392,7 @@ footer .ft #copyright-year {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    font-size: 1.1em;
+    font-size: 0.98em;
     color: #212738;
   }
   footer .ft img {
